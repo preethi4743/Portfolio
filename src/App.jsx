@@ -10,7 +10,6 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Education from "./components/Education.jsx";
 import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
 import Experience from "./components/Experience.jsx";
 
 // Component to handle scroll behavior
@@ -74,7 +73,6 @@ function App() {
             <Experience id="experience" />
             <Contact id="contact" />
           </Box>
-          <Footer />
         </Box>
       </Router>
     </ThemeProvider>
