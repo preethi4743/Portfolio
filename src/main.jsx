@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { ThemeProvider } from "./context/ThemeProvider";
+import { CustomThemeProvider } from "./context/ThemeProvider";
 
 // Smooth scrolling polyfill for Safari
 if (!("scrollBehavior" in document.documentElement.style)) {
@@ -11,8 +11,8 @@ if (!("scrollBehavior" in document.documentElement.style)) {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
+    <CustomThemeProvider>
       <App />
-    </ThemeProvider>
+    </CustomThemeProvider>
   </React.StrictMode>
 );

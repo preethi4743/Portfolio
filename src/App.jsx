@@ -1,8 +1,12 @@
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import React, { useEffect } from "react";
+import {
+  ThemeProvider as MuiThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
+import { useTheme } from "./hooks/useTheme"; // custom hook
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
@@ -21,10 +25,7 @@ const ScrollToHashElement = () => {
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
   }, [location]);
@@ -33,26 +34,18 @@ const ScrollToHashElement = () => {
 };
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { theme, toggleTheme } = useTheme(); // from context
 
-  const theme = createTheme({
+  const muiTheme = createTheme({
     palette: {
-      mode: darkMode ? "dark" : "light",
-      primary: {
-        main: "#0d47a1",
-      },
-      secondary: {
-        main: "#4caf50",
-      },
+      mode: theme === "dark" ? "dark" : "light",
+      primary: { main: "#0d47a1" },
+      secondary: { main: "#4caf50" },
     },
   });
 
-  const toggleTheme = () => {
-    setDarkMode((prevMode) => !prevMode);
-  };
-
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={muiTheme}>
       <CssBaseline />
       <Router>
         <ScrollToHashElement />
@@ -63,7 +56,7 @@ function App() {
             color: "text.primary",
           }}
         >
-          <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+          <Navbar darkMode={theme === "dark"} toggleTheme={toggleTheme} />
           <Box component="main">
             <Hero id="home" />
             <About id="about" />
@@ -75,7 +68,7 @@ function App() {
           </Box>
         </Box>
       </Router>
-    </ThemeProvider>
+    </MuiThemeProvider>
   );
 }
 
