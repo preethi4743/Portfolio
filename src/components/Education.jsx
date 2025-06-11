@@ -11,9 +11,9 @@ const educationData = [
     degree: "Master of Science in Computer Science",
     institution: "University of Central Missouri",
     logo: ucmLogo,
-    duration: "Jan 2022 – Dec 2023",
+    duration: "Jan 2023 – May 2024",
     location: "Missouri, USA",
-    cgpa: "3.85 / 4.0",
+    cgpa: "3.5 / 4.0",
     additionalInfo:
       "Relevant Coursework: Data Structures & Algorithms, Operating Systems, Software Engineering, OOP",
   },
@@ -21,9 +21,9 @@ const educationData = [
     degree: "Bachelor of Technology in Computer Science and Engineering",
     institution: "JNTU Hyderabad",
     logo: jntuLogo,
-    duration: "Aug 2017 – May 2021",
+    duration: "June 2018 – July 2022",
     location: "Telangana, India",
-    cgpa: "8.7 / 10",
+    cgpa: "7.8 / 10",
     additionalInfo:
       "Activities: Member of the Coding Club, Organized tech fests",
   },
