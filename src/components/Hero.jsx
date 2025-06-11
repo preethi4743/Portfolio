@@ -10,7 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { Code, Storage, Build, Cloud } from "@mui/icons-material";
 import HandWave from "./HandWave";
-import ScrollDownIndicator from "./ScrollDown";
+//mport ScrollDownIndicator from "./ScrollDown";
 
 const Hero = () => {
   const theme = useTheme();
@@ -308,9 +308,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </Container>
-
-      {/* Scroll indicator */}
-      <ScrollDownIndicator />
     </Box>
   );
 };

@@ -24,87 +24,44 @@ import {
   ArrowBack,
   ArrowForward,
 } from "@mui/icons-material";
+import ebookStoreImage from "../assets/Images/ebookStore.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "AI-Powered E-Commerce Platform",
+    title: "eBookStore",
     description:
-      "Next-gen shopping experience with personalized recommendations using machine learning",
-    image: "/images/ecommerce-ai.jpg",
-    tags: ["React", "Node.js", "TensorFlow", "MongoDB"],
-    github: "#",
-    demo: "#",
+      "An online shopping platform offering a personalized and responsive user experience.",
+
+    image: ebookStoreImage, // <-- Replace with your actual image path
+    tags: ["React", "Spring Boot", "MongoDB", "Firebase"],
+    github: "https://github.com/Preethi4743/ebookstore", // <-- Replace with your GitHub repo
+    demo: "https://ebookstore-demo.netlify.app", // <-- Replace with your deployed URL
     details: {
       features: [
-        "Real-time product recommendations",
-        "Visual search using computer vision",
-        "Personalized shopping assistant",
-        "Automated inventory management",
+        "Secure user authentication and authorization",
+        "Add to cart and checkout functionality",
+        "Search and filter books by title, author, and genre",
+        "Responsive and user-friendly UI",
+        "Admin panel for managing book inventory",
       ],
       technologies: [
-        "React for frontend with Redux state management",
-        "Node.js with Express for backend",
-        "TensorFlow.js for ML models",
-        "MongoDB Atlas for database",
-        "AWS EC2 for deployment",
+        "Spring Boot for backend REST APIs",
+        "Spring Security for role-based authentication and authorization",
+        "Firebase Authentication for secure login",
+        "React.js for frontend with Redux for state management",
+        "Material UI for modern UI components",
+        "MongoDB Atlas for cloud database storage",
+        "Netlify for deploying the frontend",
       ],
-      challenges:
-        "Implementing real-time recommendation engine with low latency",
-      solutions: "Used WebSockets for real-time updates and Redis for caching",
-    },
-  },
-  {
-    id: 2,
-    title: "Blockchain Voting System",
-    description:
-      "Decentralized voting platform ensuring transparency and security",
-    image: "/images/blockchain-voting.jpg",
-    tags: ["Solidity", "Web3.js", "React", "Ethereum"],
-    github: "#",
-    demo: "#",
-    details: {
-      features: [
-        "Immutable vote recording",
-        "Anonymous yet verifiable voting",
-        "Real-time results dashboard",
-        "Smart contract-based rules",
+      challenges: [
+        "Integrating Firebase Authentication with custom backend roles",
+        "Maintaining global state consistency in cart and user sessions",
       ],
-      technologies: [
-        "Ethereum blockchain",
-        "Solidity smart contracts",
-        "IPFS for decentralized storage",
-        "MetaMask integration",
-        "React frontend",
+      solutions: [
+        "Used token-based auth with Firebase and Spring Security to ensure secure access control",
+        "Implemented Redux for seamless cart and session state management",
       ],
-      challenges: "Ensuring voter anonymity while maintaining auditability",
-      solutions: "Implemented zero-knowledge proofs for verification",
-    },
-  },
-  {
-    id: 3,
-    title: "AR Interior Design App",
-    description: "Augmented reality application for virtual home decoration",
-    image: "/images/ar-interior.jpg",
-    tags: ["ARKit", "Swift", "Firebase", "3D Modeling"],
-    github: "#",
-    demo: "#",
-    details: {
-      features: [
-        "Real-time AR furniture placement",
-        "3D product catalog",
-        "Room measurement tools",
-        "Collaborative design spaces",
-      ],
-      technologies: [
-        "ARKit for iOS",
-        "SceneKit for 3D rendering",
-        "Firebase for backend",
-        "Blender for 3D models",
-        "SwiftUI for interface",
-      ],
-      challenges: "Precise object placement in varying lighting conditions",
-      solutions: "Implemented plane detection with surface estimation",
     },
   },
 ];
@@ -382,14 +339,14 @@ const Projects = () => {
               >
                 <CardMedia
                   component="img"
-                  height="100%"
+                  height="150"
                   image={selectedProject.image}
                   alt={selectedProject.title}
                   sx={{ objectFit: "cover" }}
                 />
                 <Box
                   sx={{
-                    position: "absolute",
+                    position: "relative",
                     bottom: 0,
                     left: 0,
                     right: 0,
