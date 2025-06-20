@@ -10,37 +10,28 @@ import {
   Grid,
 } from "@mui/material";
 import { LocationOn, CalendarToday, Work, Code } from "@mui/icons-material";
-import SPGLogo from "../assets/logo/s&p.jpg";
-import McKessonLogo from "../assets/logo/mk.jpg";
-import AdobeLogo from "../assets/logo/Adobe.jpg";
+import AIMLogo from "../assets/logo/aim.jpg";
+import sreenikilogo from "../assets/logo/sreenikki.jpg";
+//import AdobeLogo from "../assets/logo/Adobe.jpg";
 
 const experiences = [
   {
     id: 1,
-    companyName: "S&P Global",
-    companyLogo: SPGLogo,
-    startDate: "Sep 2024",
+    companyName: "AIM Technology Solutions",
+    companyLogo: AIMLogo,
+    startDate: "Jan 2024",
     endDate: "Present",
     location: "Fort Mill, South Carolina, United States",
     role: "Full-Stack Java Developer",
   },
   {
     id: 2,
-    companyName: "McKesson",
-    companyLogo: McKessonLogo,
-    startDate: "July 2023",
-    endDate: "August 2024",
-    location: "Texas, United States",
-    role: "Full-Stack Developer",
-  },
-  {
-    id: 3,
-    companyName: "Adobe",
-    companyLogo: AdobeLogo,
-    startDate: "May 2021",
-    endDate: "Nov 2022",
-    location: "Hyderabad, Telangana, India",
-    role: "Full-Stack Developer",
+    companyName: "Sree Nikki Solutions",
+    companyLogo: sreenikilogo,
+    startDate: "July 2020",
+    endDate: "August 2022",
+    location: "Hyderbad, United States",
+    role: "Java Developer",
   },
 ];
 
