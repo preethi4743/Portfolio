@@ -17,21 +17,27 @@ import sreenikilogo from "../assets/logo/sreenikki.jpg";
 const experiences = [
   {
     id: 1,
-    companyName: "AIM Technology Solutions",
-    companyLogo: AIMLogo,
+    companyName: "Morgan Stanley",
     startDate: "Jan 2024",
     endDate: "Present",
-    location: "Fort Mill, South Carolina, United States",
+    location: "NYC, NY",
     role: "Full-Stack Java Developer",
   },
   {
     id: 2,
-    companyName: "Sree Nikki Solutions",
-    companyLogo: sreenikilogo,
-    startDate: "July 2020",
-    endDate: "August 2022",
-    location: "Hyderbad, United States",
-    role: "Java Developer",
+    companyName: "KPMG",
+    startDate: "Dec 2023",
+    endDate: "May 2024",
+    location: "United States",
+    role: "Java Full Stack Developer",
+  },
+   {
+    id: 3,
+    companyName: "AIM Technology Solutions",
+    startDate: "Aug 2019",
+    endDate: "Nov 2022",
+    location: "Hyderabad, Telangana, India",
+    role: "Full-Stack Java Developer",
   },
 ];
 
